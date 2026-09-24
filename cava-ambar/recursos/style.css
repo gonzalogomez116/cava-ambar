@@ -1,0 +1,971 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.5;
+    color: #2b1d14;
+    background-color: #f5efe6;
+}
+
+.contenedor {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 26px;
+    color: #5b3a1e;
+    margin-bottom: 12px;
+}
+
+h3 {
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+a {
+    color: #8a4b14;
+}
+
+a:hover {
+    color: #c8862a;
+}
+
+header {
+    background-color: #2b1d14;
+    color: #f5efe6;
+    padding-top: 15px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.marca img {
+    width: 60px;
+    height: 60px;
+}
+
+.marca h1 {
+    color: #e9a53d;
+}
+
+.marca p {
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+.marca:hover h1 {
+    color: #f3c26b;
+}
+
+header nav {
+    position: relative;
+    border-top: 1px solid #5b3a1e;
+}
+
+header nav > ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav > ul > li {
+    flex: 1;
+    text-align: center;
+}
+
+header nav > ul > li > a {
+    display: block;
+    padding: 12px 6px;
+    color: #f5efe6;
+    text-decoration: none;
+}
+
+header nav > ul > li:hover > a,
+header nav > ul > li:focus-within > a {
+    background-color: #5b3a1e;
+    color: #fff;
+}
+
+.con-panel > a::after {
+    content: " \25BE";
+    font-size: 12px;
+}
+
+.panel {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    gap: 50px;
+    padding: 20px 25px;
+    background-color: #fff;
+    color: #2b1d14;
+    text-align: left;
+    border-top: 3px solid #c8862a;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.con-panel:hover > .panel,
+.con-panel:focus-within > .panel {
+    display: flex;
+}
+
+.panel .titulo {
+    font-weight: bold;
+    color: #5b3a1e;
+    margin-bottom: 8px;
+}
+
+.panel ul {
+    list-style: none;
+}
+
+.panel li {
+    margin-bottom: 6px;
+}
+
+.panel a {
+    color: #2b1d14;
+    text-decoration: none;
+}
+
+.panel a:hover {
+    color: #c8862a;
+    text-decoration: underline;
+}
+
+.panel .destacado {
+    margin-left: auto;
+    text-align: center;
+}
+
+.panel .destacado img {
+    display: block;
+    width: 80px;
+    height: 120px;
+    margin: 0 auto 6px;
+    object-fit: contain;
+    background-color: #fff;
+}
+
+.cuerpo {
+    display: flex;
+    gap: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.columna-principal {
+    flex: 3;
+}
+
+.columna-lateral {
+    flex: 1;
+}
+
+.columna-principal section {
+    margin-bottom: 30px;
+}
+
+.portada {
+    background-color: #5b3a1e;
+    color: #f5efe6;
+    padding: 30px 25px;
+    border-radius: 6px;
+}
+
+.portada h2 {
+    color: #e9a53d;
+    font-size: 32px;
+}
+
+.boton {
+    display: inline-block;
+    background-color: #c8862a;
+    color: #2b1d14;
+    border: none;
+    padding: 10px 20px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #e9a53d;
+    color: #2b1d14;
+}
+
+.secundario {
+    background-color: #d9cdb8;
+}
+
+.columna-principal article {
+    background-color: #fff;
+    border: 1px solid #d9cdb8;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.tarjetas article {
+    flex: 1 1 180px;
+    margin-bottom: 0;
+}
+
+.tarjetas img {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+dl {
+    font-size: 14px;
+}
+
+dt {
+    display: inline;
+    font-weight: bold;
+}
+
+dt::after {
+    content: ": ";
+}
+
+dd {
+    display: inline;
+}
+
+dd::after {
+    content: "";
+    display: block;
+}
+
+.columna-lateral section {
+    background-color: #e8dcc6;
+    border-left: 4px solid #c8862a;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.columna-lateral h2 {
+    font-size: 20px;
+}
+
+.columna-lateral .aviso {
+    background-color: #f3d9b5;
+    border-left-color: #8a4b14;
+}
+
+fieldset {
+    border: 1px solid #d9cdb8;
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+legend {
+    padding: 0 8px;
+    font-weight: bold;
+    color: #5b3a1e;
+}
+
+label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #b8a88e;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+input[type="checkbox"] + label {
+    display: inline;
+}
+
+.buscador {
+    margin-top: 15px;
+}
+
+.categorias article {
+    flex: 1 1 130px;
+}
+
+.categorias h3 a {
+    text-decoration: none;
+}
+
+.categorias p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+footer {
+    background-color: #2b1d14;
+    color: #d9cdb8;
+    padding: 25px 0;
+    font-size: 14px;
+}
+
+.pie {
+    display: flex;
+    gap: 25px;
+}
+
+.pie section {
+    flex: 1;
+}
+
+.pie h3 {
+    color: #e9a53d;
+    font-size: 16px;
+}
+
+.pie ul {
+    list-style: none;
+}
+
+.pie a {
+    color: #d9cdb8;
+}
+
+.pie a:hover {
+    color: #e9a53d;
+}
+
+.producto > a {
+    display: block;
+}
+
+.producto h4 {
+    font-size: 19px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.producto h3 a,
+.producto h4 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.producto h3 a:hover,
+.producto h4 a:hover {
+    text-decoration: underline;
+}
+
+.subcategoria {
+    margin-top: 25px;
+}
+
+.columna-principal .subcategoria h3 {
+    font-size: 22px;
+    margin: 0 0 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #c8862a;
+}
+
+.subcategoria:first-of-type {
+    margin-top: 10px;
+}
+
+.migas {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.ficha {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    background-color: #fff;
+    border: 1px solid #d9cdb8;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.ficha img {
+    flex: none;
+    width: 260px;
+    height: 380px;
+    object-fit: contain;
+}
+
+.ficha > div {
+    flex: 1;
+}
+
+.etiqueta {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    color: #8a4b14;
+    margin-bottom: 4px;
+}
+
+.ficha dl {
+    margin-bottom: 15px;
+}
+
+.ficha .boton {
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.columna-principal section h3 {
+    color: #5b3a1e;
+    margin-top: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+th, td {
+    border: 1px solid #d9cdb8;
+    padding: 8px 12px;
+    text-align: left;
+    font-size: 15px;
+}
+
+th {
+    width: 40%;
+    background-color: #e8dcc6;
+}
+
+.tragos article {
+    flex: 1 1 260px;
+    max-width: 420px;
+}
+
+.trago img {
+    height: 240px;
+    border-radius: 4px;
+}
+
+.trago h4 {
+    font-size: 15px;
+    color: #5b3a1e;
+    margin: 10px 0 4px;
+}
+
+.trago ul {
+    margin-left: 20px;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.trago p {
+    font-size: 15px;
+}
+
+.sabor {
+    font-style: italic;
+    color: #5b3a1e;
+}
+
+@media (max-width: 720px) {
+    .cuerpo {
+        flex-direction: column;
+    }
+
+    .pie {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .marca h1 {
+        font-size: 28px;
+    }
+
+    header nav > ul {
+        flex-wrap: wrap;
+    }
+
+    header nav > ul > li {
+        flex: 1 1 25%;
+    }
+
+    .panel {
+        gap: 20px;
+    }
+
+    .ficha {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .ficha img {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 15px;
+    }
+
+    header nav > ul {
+        flex-direction: column;
+    }
+
+    header nav > ul > li {
+        flex: none;
+        text-align: left;
+        border-bottom: 1px solid #5b3a1e;
+    }
+
+    header nav > ul > li > a {
+        padding: 14px 8px;
+    }
+
+    .panel {
+        position: static;
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 15px;
+        box-shadow: none;
+    }
+
+    .panel .destacado {
+        display: none;
+    }
+
+    .marca img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .marca h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .portada {
+        padding: 20px 15px;
+    }
+
+    .portada h2 {
+        font-size: 26px;
+    }
+
+    .contenedor {
+        padding: 0 12px;
+    }
+
+    .tarjetas article {
+        flex: 1 1 100%;
+    }
+
+    .categorias article {
+        flex: 1 1 40%;
+    }
+
+    .producto {
+        display: grid;
+        grid-template-columns: 90px 1fr;
+        column-gap: 12px;
+    }
+
+    .producto > a {
+        grid-row: 1 / span 3;
+    }
+
+    .tarjetas .producto img {
+        height: 110px;
+        margin-bottom: 0;
+    }
+
+    .ficha img {
+        height: 240px;
+    }
+
+    .boton {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+}
+
+/* filtros */
+
+.ancla {
+    display: block;
+}
+
+.ver-todo {
+    display: none;
+    margin-bottom: 15px;
+}
+
+section:has(.ancla:target) .ver-todo {
+    display: block;
+}
+
+.columna-principal:has(.ancla:target) > section:not(:has(.ancla:target)) {
+    display: none;
+}
+
+#whisky:has(#whisky-escocia:target) .producto:not(.o-escocia),
+#whisky:has(#whisky-escocia:target) .subcategoria:not(:has(.o-escocia)) {
+    display: none;
+}
+
+#whisky:has(#whisky-estados-unidos:target) .producto:not(.o-estados-unidos),
+#whisky:has(#whisky-estados-unidos:target) .subcategoria:not(:has(.o-estados-unidos)) {
+    display: none;
+}
+
+#whisky:has(#whisky-irlanda:target) .producto:not(.o-irlanda),
+#whisky:has(#whisky-irlanda:target) .subcategoria:not(:has(.o-irlanda)) {
+    display: none;
+}
+
+#whisky:has(#whisky-japon:target) .producto:not(.o-japon),
+#whisky:has(#whisky-japon:target) .subcategoria:not(:has(.o-japon)) {
+    display: none;
+}
+
+#whisky:has(#whisky-single-malt:target) .producto:not(.t-single-malt),
+#whisky:has(#whisky-single-malt:target) .subcategoria:not(:has(.t-single-malt)) {
+    display: none;
+}
+
+#whisky:has(#whisky-blended-malt:target) .producto:not(.t-blended-malt),
+#whisky:has(#whisky-blended-malt:target) .subcategoria:not(:has(.t-blended-malt)) {
+    display: none;
+}
+
+#whisky:has(#whisky-single-pot-still:target) .producto:not(.t-single-pot-still),
+#whisky:has(#whisky-single-pot-still:target) .subcategoria:not(:has(.t-single-pot-still)) {
+    display: none;
+}
+
+#whisky:has(#whisky-single-grain:target) .producto:not(.t-single-grain),
+#whisky:has(#whisky-single-grain:target) .subcategoria:not(:has(.t-single-grain)) {
+    display: none;
+}
+
+#whisky:has(#whisky-blended:target) .producto:not(.t-blended),
+#whisky:has(#whisky-blended:target) .subcategoria:not(:has(.t-blended)) {
+    display: none;
+}
+
+#whisky:has(#whisky-bourbon:target) .producto:not(.t-bourbon),
+#whisky:has(#whisky-bourbon:target) .subcategoria:not(:has(.t-bourbon)) {
+    display: none;
+}
+
+#whisky:has(#whisky-rye:target) .producto:not(.t-rye),
+#whisky:has(#whisky-rye:target) .subcategoria:not(:has(.t-rye)) {
+    display: none;
+}
+
+#whisky:has(#whisky-saborizado:target) .producto:not(.t-saborizado),
+#whisky:has(#whisky-saborizado:target) .subcategoria:not(:has(.t-saborizado)) {
+    display: none;
+}
+
+#whisky:has(#whisky-ediciones-limitadas:target) .regular {
+    display: none;
+}
+
+#gin:has(#gin-inglaterra:target) .producto:not(.o-inglaterra),
+#gin:has(#gin-inglaterra:target) .subcategoria:not(:has(.o-inglaterra)) {
+    display: none;
+}
+
+#gin:has(#gin-escocia:target) .producto:not(.o-escocia),
+#gin:has(#gin-escocia:target) .subcategoria:not(:has(.o-escocia)) {
+    display: none;
+}
+
+#gin:has(#gin-japon:target) .producto:not(.o-japon),
+#gin:has(#gin-japon:target) .subcategoria:not(:has(.o-japon)) {
+    display: none;
+}
+
+#gin:has(#gin-london-dry:target) .producto:not(.t-london-dry),
+#gin:has(#gin-london-dry:target) .subcategoria:not(:has(.t-london-dry)) {
+    display: none;
+}
+
+#gin:has(#gin-saborizado:target) .producto:not(.t-saborizado),
+#gin:has(#gin-saborizado:target) .subcategoria:not(:has(.t-saborizado)) {
+    display: none;
+}
+
+#gin:has(#gin-contemporaneo:target) .producto:not(.t-contemporaneo),
+#gin:has(#gin-contemporaneo:target) .subcategoria:not(:has(.t-contemporaneo)) {
+    display: none;
+}
+
+#gin:has(#gin-licor:target) .producto:not(.t-licor),
+#gin:has(#gin-licor:target) .subcategoria:not(:has(.t-licor)) {
+    display: none;
+}
+
+#gin:has(#gin-ediciones-limitadas:target) .regular {
+    display: none;
+}
+
+#vodka:has(#vodka-escocia:target) .producto:not(.o-escocia),
+#vodka:has(#vodka-escocia:target) .subcategoria:not(:has(.o-escocia)) {
+    display: none;
+}
+
+#vodka:has(#vodka-francia:target) .producto:not(.o-francia),
+#vodka:has(#vodka-francia:target) .subcategoria:not(:has(.o-francia)) {
+    display: none;
+}
+
+#vodka:has(#vodka-canada:target) .producto:not(.o-canada),
+#vodka:has(#vodka-canada:target) .subcategoria:not(:has(.o-canada)) {
+    display: none;
+}
+
+#vodka:has(#vodka-japon:target) .producto:not(.o-japon),
+#vodka:has(#vodka-japon:target) .subcategoria:not(:has(.o-japon)) {
+    display: none;
+}
+
+#vodka:has(#vodka-clasico:target) .producto:not(.t-clasico),
+#vodka:has(#vodka-clasico:target) .subcategoria:not(:has(.t-clasico)) {
+    display: none;
+}
+
+#vodka:has(#vodka-saborizado:target) .producto:not(.t-saborizado),
+#vodka:has(#vodka-saborizado:target) .subcategoria:not(:has(.t-saborizado)) {
+    display: none;
+}
+
+#vodka:has(#vodka-licor:target) .producto:not(.t-licor),
+#vodka:has(#vodka-licor:target) .subcategoria:not(:has(.t-licor)) {
+    display: none;
+}
+
+#vodka:has(#vodka-ediciones-limitadas:target) .regular {
+    display: none;
+}
+
+#tequila:has(#tequila-mexico:target) .producto:not(.o-mexico),
+#tequila:has(#tequila-mexico:target) .subcategoria:not(:has(.o-mexico)) {
+    display: none;
+}
+
+#tequila:has(#tequila-blanco:target) .producto:not(.t-blanco),
+#tequila:has(#tequila-blanco:target) .subcategoria:not(:has(.t-blanco)) {
+    display: none;
+}
+
+#tequila:has(#tequila-joven:target) .producto:not(.t-joven),
+#tequila:has(#tequila-joven:target) .subcategoria:not(:has(.t-joven)) {
+    display: none;
+}
+
+#tequila:has(#tequila-reposado:target) .producto:not(.t-reposado),
+#tequila:has(#tequila-reposado:target) .subcategoria:not(:has(.t-reposado)) {
+    display: none;
+}
+
+#tequila:has(#tequila-anejo:target) .producto:not(.t-anejo),
+#tequila:has(#tequila-anejo:target) .subcategoria:not(:has(.t-anejo)) {
+    display: none;
+}
+
+#tequila:has(#tequila-extra-anejo:target) .producto:not(.t-extra-anejo),
+#tequila:has(#tequila-extra-anejo:target) .subcategoria:not(:has(.t-extra-anejo)) {
+    display: none;
+}
+
+#tequila:has(#tequila-cristalino:target) .producto:not(.t-cristalino),
+#tequila:has(#tequila-cristalino:target) .subcategoria:not(:has(.t-cristalino)) {
+    display: none;
+}
+
+#tequila:has(#tequila-saborizado:target) .producto:not(.t-saborizado),
+#tequila:has(#tequila-saborizado:target) .subcategoria:not(:has(.t-saborizado)) {
+    display: none;
+}
+
+#tequila:has(#tequila-ediciones-limitadas:target) .regular {
+    display: none;
+}
+
+#ron:has(#ron-inglaterra:target) .producto:not(.o-inglaterra),
+#ron:has(#ron-inglaterra:target) .subcategoria:not(:has(.o-inglaterra)) {
+    display: none;
+}
+
+#ron:has(#ron-blanco:target) .producto:not(.t-blanco),
+#ron:has(#ron-blanco:target) .subcategoria:not(:has(.t-blanco)) {
+    display: none;
+}
+
+#ron:has(#ron-especiado:target) .producto:not(.t-especiado),
+#ron:has(#ron-especiado:target) .subcategoria:not(:has(.t-especiado)) {
+    display: none;
+}
+
+#ron:has(#ron-saborizado:target) .producto:not(.t-saborizado),
+#ron:has(#ron-saborizado:target) .subcategoria:not(:has(.t-saborizado)) {
+    display: none;
+}
+
+#mezcal:has(#mezcal-mexico:target) .producto:not(.o-mexico),
+#mezcal:has(#mezcal-mexico:target) .subcategoria:not(:has(.o-mexico)) {
+    display: none;
+}
+
+#mezcal:has(#mezcal-joven:target) .producto:not(.t-joven),
+#mezcal:has(#mezcal-joven:target) .subcategoria:not(:has(.t-joven)) {
+    display: none;
+}
+
+#mezcal:has(#mezcal-ediciones-limitadas:target) .regular {
+    display: none;
+}
+
+#champagne:has(#champagne-francia:target) .producto:not(.o-francia),
+#champagne:has(#champagne-francia:target) .subcategoria:not(:has(.o-francia)) {
+    display: none;
+}
+
+#champagne:has(#champagne-brut:target) .producto:not(.t-brut),
+#champagne:has(#champagne-brut:target) .subcategoria:not(:has(.t-brut)) {
+    display: none;
+}
+
+#champagne:has(#champagne-extra-brut:target) .producto:not(.t-extra-brut),
+#champagne:has(#champagne-extra-brut:target) .subcategoria:not(:has(.t-extra-brut)) {
+    display: none;
+}
+
+#champagne:has(#champagne-rose:target) .producto:not(.t-rose),
+#champagne:has(#champagne-rose:target) .subcategoria:not(:has(.t-rose)) {
+    display: none;
+}
+
+#champagne:has(#champagne-demi-sec:target) .producto:not(.t-demi-sec),
+#champagne:has(#champagne-demi-sec:target) .subcategoria:not(:has(.t-demi-sec)) {
+    display: none;
+}
+
+#champagne:has(#champagne-ediciones-limitadas:target) .regular {
+    display: none;
+}
+
+#licores:has(#licores-italia:target) .producto:not(.o-italia),
+#licores:has(#licores-italia:target) .subcategoria:not(:has(.o-italia)) {
+    display: none;
+}
+
+#licores:has(#licores-francia:target) .producto:not(.o-francia),
+#licores:has(#licores-francia:target) .subcategoria:not(:has(.o-francia)) {
+    display: none;
+}
+
+#licores:has(#licores-irlanda:target) .producto:not(.o-irlanda),
+#licores:has(#licores-irlanda:target) .subcategoria:not(:has(.o-irlanda)) {
+    display: none;
+}
+
+#licores:has(#licores-inglaterra:target) .producto:not(.o-inglaterra),
+#licores:has(#licores-inglaterra:target) .subcategoria:not(:has(.o-inglaterra)) {
+    display: none;
+}
+
+#licores:has(#licores-espana:target) .producto:not(.o-espana),
+#licores:has(#licores-espana:target) .subcategoria:not(:has(.o-espana)) {
+    display: none;
+}
+
+#licores:has(#licores-de-cafe:target) .producto:not(.t-de-cafe),
+#licores:has(#licores-de-cafe:target) .subcategoria:not(:has(.t-de-cafe)) {
+    display: none;
+}
+
+#licores:has(#licores-citrico:target) .producto:not(.t-citrico),
+#licores:has(#licores-citrico:target) .subcategoria:not(:has(.t-citrico)) {
+    display: none;
+}
+
+#licores:has(#licores-crema:target) .producto:not(.t-crema),
+#licores:has(#licores-crema:target) .subcategoria:not(:has(.t-crema)) {
+    display: none;
+}
+
+#licores:has(#licores-de-frutos-secos:target) .producto:not(.t-de-frutos-secos),
+#licores:has(#licores-de-frutos-secos:target) .subcategoria:not(:has(.t-de-frutos-secos)) {
+    display: none;
+}
+
+#licores:has(#licores-de-chocolate:target) .producto:not(.t-de-chocolate),
+#licores:has(#licores-de-chocolate:target) .subcategoria:not(:has(.t-de-chocolate)) {
+    display: none;
+}
+
+#licores:has(#licores-floral:target) .producto:not(.t-floral),
+#licores:has(#licores-floral:target) .subcategoria:not(:has(.t-floral)) {
+    display: none;
+}
+
+/* fin filtros */
