@@ -15,5 +15,3 @@ Trabajo práctico de la materia Programación Web I (UCES) — Tecnicatura Unive
 ## Sobre el sitio
 
 Cava Ámbar es una tienda ficticia de bebidas alcohólicas (whisky, gin, vodka, tequila, ron, mezcal, champagne y licores). El sitio tiene tres páginas principales (Inicio, Catálogo y servicios, Contacto) más las páginas individuales de cada producto.
-
-Para verlo localmente basta con abrir `cava-ambar/index.html` en el navegador, o servir la carpeta con un servidor local (por ejemplo Apache/MAMP).
