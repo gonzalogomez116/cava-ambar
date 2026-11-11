@@ -97,7 +97,7 @@ function iniciarBuscador() {
 
         for (var i = 0; i < productos.length; i++) {
             var producto = productos[i];
-            var titulo = producto.querySelector('h4');
+            var titulo = producto.querySelector('h3, h4');
             var descripcion = producto.querySelector('p');
             var contenido = titulo.textContent.toLowerCase() + ' ' + descripcion.textContent.toLowerCase();
 
