@@ -105,6 +105,22 @@ header nav > ul > li:focus-within > a {
     color: #fff;
 }
 
+.menu-boton {
+    display: none;
+    background: none;
+    border: 1px solid #5b3a1e;
+    color: #f5efe6;
+    font-size: 22px;
+    line-height: 1;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.menu-boton:hover {
+    background-color: #5b3a1e;
+}
+
 .con-panel > a::after {
     content: " \25BE";
     font-size: 12px;
@@ -334,8 +350,26 @@ input[type="checkbox"] + label {
     display: inline;
 }
 
+input.campo-valido,
+select.campo-valido,
+textarea.campo-valido {
+    border-color: #4a7c3f;
+    background-color: #f1f8ee;
+}
+
+input.campo-invalido,
+select.campo-invalido,
+textarea.campo-invalido {
+    border-color: #a33b3b;
+    background-color: #fbeeee;
+}
+
 .buscador {
     margin-top: 15px;
+}
+
+.oculto {
+    display: none;
 }
 
 .categorias article {
@@ -559,6 +593,25 @@ th {
         font-size: 15px;
     }
 
+    header {
+        position: relative;
+    }
+
+    .menu-boton {
+        display: block;
+        position: absolute;
+        top: 14px;
+        right: 12px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header nav.activo {
+        display: block;
+    }
+
     header nav > ul {
         flex-direction: column;
     }
@@ -645,7 +698,6 @@ th {
     }
 }
 
-/* filtros */
 
 .ancla {
     display: block;
@@ -968,4 +1020,3 @@ section:has(.ancla:target) .ver-todo {
     display: none;
 }
 
-/* fin filtros */
